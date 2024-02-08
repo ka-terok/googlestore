@@ -1,0 +1,49 @@
+.button {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: $text;
+  white-space: nowrap;
+  font-family: var(--roboto-font);
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: unset;
+  height: 40px;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+    color: $blue;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-transparent {
+    @extend .button;
+
+    background-color: transparent;
+    border: 2px solid $text;
+    border-radius: $border-radius-button;
+
+    &:hover,
+    &:active {
+      border-color: $blue;
+    }
+  }
+
+  &-link {
+    @extend .button;
+    padding: 0;
+  }
+}

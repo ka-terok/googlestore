@@ -1,0 +1,22 @@
+.correction {
+  &-container {
+    @extend .container;
+    box-sizing: border-box;
+    padding: 26px 42px 22px;
+    position: relative;
+  }
+
+  &-badge {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    font-size: 9px;
+    line-height: 1;
+  }
+
+  &-text {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: var(--roboto-font);
+  }
+}

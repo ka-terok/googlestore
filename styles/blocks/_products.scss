@@ -1,0 +1,100 @@
+.products {
+  &-container {
+    @extend .container;
+    padding-bottom: 46px;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  &-list {
+    padding-left: 129px;
+    list-style: none;
+
+    @media screen and (max-width: $mobile) {
+      padding-left: 40px;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    font-family: var(--roboto-font);
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 400;
+  }
+
+  &-hr {
+    margin: 0;
+  }
+
+  //important because of the slider
+  &-slider {
+    padding: 90px 129px 112px 0 !important;
+
+    @media screen and (max-width: $tablet) {
+      padding: 50px 129px 112px 0 !important;
+    }
+
+    @media screen and (max-width: $mobile) {
+      padding: 50px 40px 112px 0 !important;
+    }
+  }
+}
+
+.product {
+  &-slide {
+    max-width: $cardWidth;
+
+    &:hover,
+    &:active {
+      .product-title {
+        color: $blue;
+      }
+    }
+  }
+
+  &-container {
+    width: 100%;
+    font-family: var(--roboto-font);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &-title {
+    color: $text;
+    text-decoration: unset;
+    transition: all 0.3s ease;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-card {
+    height: $cardHeight;
+    background-color: $backgroundColor;
+    border-radius: $border-radius-20;
+    position: relative;
+  }
+
+  &-badge {
+    &__new {
+      position: absolute;
+      top: 23px;
+      left: 29px;
+      color: $blue;
+      line-height: 18px;
+      font-size: 12px;
+    }
+  }
+}

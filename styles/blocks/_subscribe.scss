@@ -1,0 +1,41 @@
+.subscribe {
+  &-container {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 386px;
+    margin-bottom: 24px;
+  }
+
+  &-icon {
+    margin-bottom: 16px;
+    margin-top: 60px;
+  }
+
+  &-title {
+    font-family: var(--roboto-font);
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    max-width: 580px;
+    margin-bottom: 42px;
+
+    @media screen and (max-width: $mobile) {
+      max-width: calc(100vw - 40px);
+    }
+
+    @media screen and (max-width: $small-mobile) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &-button {
+    @extend .button-transparent;
+    max-height: 24px;
+    max-width: min-content;
+    margin-bottom: 28px;
+  }
+}

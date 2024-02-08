@@ -1,0 +1,12 @@
+.link {
+  text-decoration: unset;
+  color: $blue;
+  transition: all 0.3s ease;
+  font-family: var(--roboto-font);
+
+  &:hover,
+  &:active {
+    color: $text;
+    cursor: pointer;
+  }
+}

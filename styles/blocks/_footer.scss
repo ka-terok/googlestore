@@ -1,0 +1,151 @@
+.footer {
+  &-container {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    height: 656px;
+    justify-content: space-between;
+
+    &__bottom {
+      padding: 17px 96px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0;
+
+      @media screen and (max-width: $large) {
+        padding: 17px 24px;
+      }
+    }
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__panel {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 40px;
+
+      @media screen and (max-width: $large) {
+        gap: 20px;
+      }
+
+      @media screen and (max-width: $tablet) {
+        gap: 10px;
+      }
+
+      @media screen and (max-width: $mobile) {
+        max-width: 100vw;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    gap: 55px;
+    padding-top: 96px;
+    padding-right: 146px;
+    list-style: none;
+
+    @media screen and (max-width: $tablet) {
+      padding-right: 40px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      justify-content: flex-start;
+    }
+  }
+
+  &-link {
+    @extend .link;
+
+    color: $text;
+    font-size: 14px;
+    line-height: 22px;
+    transition: all 0.3s ease;
+
+    &__panel {
+      @extend .footer-link;
+      font-size: 11px;
+      line-height: 16px;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    &:hover,
+    &:active {
+      color: $blue;
+    }
+  }
+
+  &-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    @media screen and (max-width: $large) {
+      gap: 30px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    list-style: none;
+
+    @media screen and (max-width: $mobile) {
+      gap: 26px;
+    }
+  }
+
+  &-icon {
+    @extend .button-icon;
+    color: $black;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active {
+      color: $blue;
+    }
+  }
+
+  &-lang {
+    width: 24px;
+    height: 18px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-hr {
+    margin: 0;
+    color: $light-gray;
+    border: none;
+    height: 1px;
+    background-color: $light-gray;
+  }
+}

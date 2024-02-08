@@ -1,0 +1,79 @@
+.header {
+  &-container {
+    @extend .container;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: $text;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &-item {
+    text-decoration: unset;
+    color: $text;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active {
+      color: $blue;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &-button {
+    @extend .button-icon;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active {
+      color: $blue;
+    }
+  }
+
+  &-burger {
+    @extend .header-button;
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+      display: flex;
+    }
+  }
+}
